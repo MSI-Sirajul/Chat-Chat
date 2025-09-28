@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chit-Chat App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for icons (or Font Awesome) -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Login/Registration Page (initially shown) -->
+        <div id="auth-page" class="page active">
+            <h2>Welcome to Chit-Chat</h2>
+            <div id="login-section">
+                <h3>Login</h3>
+                <input type="email" id="login-email" placeholder="Email">
+                <input type="password" id="login-password" placeholder="Password">
+                <button id="login-btn">Login</button>
+                <p>Don't have an account? <a href="#" id="show-register">Register</a></p>
+            </div>
+            <div id="register-section" style="display: none;">
+                <h3>Register</h3>
+                <input type="text" id="register-name" placeholder="Name">
+                <input type="email" id="register-email" placeholder="Email">
+                <input type="password" id="register-password" placeholder="Password">
+                <button id="register-btn">Register</button>
+                <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+            </div>
+        </div>
+
+        <!-- Main App Content (hidden until logged in) -->
+        <div id="main-app-content" class="page">
+            <header class="app-header">
+                <div class="header-gradient"></div>
+                <div class="header-content">
+                    <h1>CHIT-CHAT</h1>
+                    <p>Recent</p>
+                    <div class="floating-buttons">
+                        <button class="chat-fab"><span class="material-icons">chat</span></button>
+                        <button class="calls-fab"><span class="material-icons">call</span></button>
+                    </div>
+                </div>
+            </header>
+
+            <nav class="toggle-nav">
+                <button id="messages-tab" class="active">MESSAGES</button>
+                <button id="calls-tab">CALLS</button>
+            </nav>
+
+            <main class="content-area">
+                <div id="messages-list" class="tab-content active">
+                    <!-- Message list items will be injected here by JavaScript -->
+                    <p class="empty-state">No recent messages.</p>
+                </div>
+                <div id="calls-list" class="tab-content">
+                    <!-- Call list items will be injected here by JavaScript -->
+                    <p class="empty-state">No recent calls.</p>
+                </div>
+                <div id="contacts-page" class="tab-content">
+                    <h2>My Contacts</h2>
+                    <ul id="contacts-list">
+                        <!-- Contacts will be loaded here -->
+                        <p class="empty-state">No contacts found.</p>
+                    </ul>
+                </div>
+                <div id="profile-page" class="tab-content">
+                    <h2>My Profile</h2>
+                    <div id="profile-details">
+                        <p>Name: <span id="profile-name"></span></p>
+                        <p>Email: <span id="profile-email"></span></p>
+                        <!-- Add more profile details -->
+                        <button id="logout-btn">Logout</button>
+                    </div>
+                </div>
+            </main>
+
+            <nav class="bottom-nav">
+                <button id="nav-home" class="active"><span class="material-icons">home</span> HOME</button>
+                <button id="nav-contacts"><span class="material-icons">people</span> CONTACTS</button>
+                <button id="nav-profile"><span class="material-icons">person</span> PROFILE</button>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Firebase SDK (put before your script.js) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
