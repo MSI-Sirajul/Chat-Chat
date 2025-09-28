@@ -1,12 +1,13 @@
 // 1. Firebase Configuration (REPLACE WITH YOUR OWN CONFIG)
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
-};
+    apiKey: "AIzaSyB6HLqY8VgJDXGPJY7CYrawLTYHmHVgnpE",
+    authDomain: "chit-chat-cbc58.firebaseapp.com",
+    projectId: "chit-chat-cbc58",
+    storageBucket: "chit-chat-cbc58.firebasestorage.app",
+    messagingSenderId: "969756307967",
+    appId: "1:969756307967:web:12a46ff754f895061c37ca",
+    measurementId: "G-V9HNRLJS6K"
+  };
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
