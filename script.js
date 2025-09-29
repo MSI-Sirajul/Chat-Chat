@@ -1,13 +1,14 @@
-// 1. Firebase Configuration (REPLACE WITH YOUR OWN CONFIG)
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyB6HLqY8VgJDXGPJY7CYrawLTYHmHVgnpE",
-    authDomain: "chit-chat-cbc58.firebaseapp.com",
-    projectId: "chit-chat-cbc58",
-    storageBucket: "chit-chat-cbc58.firebasestorage.app",
-    messagingSenderId: "969756307967",
-    appId: "1:969756307967:web:12a46ff754f895061c37ca",
-    measurementId: "G-V9HNRLJS6K"
-  };
+  apiKey: "AIzaSyB6HLqY8VgJDXGPJY7CYrawLTYHmHVgnpE",
+  authDomain: "chit-chat-cbc58.firebaseapp.com",
+  databaseURL: "https://chit-chat-cbc58-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "chit-chat-cbc58",
+  storageBucket: "chit-chat-cbc58.firebasestorage.app",
+  messagingSenderId: "969756307967",
+  appId: "1:969756307967:web:12a46ff754f895061c37ca",
+  measurementId: "G-V9HNRLJS6K"
+};
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
